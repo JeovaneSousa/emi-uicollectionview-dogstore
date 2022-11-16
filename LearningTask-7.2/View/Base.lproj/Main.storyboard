@@ -52,28 +52,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Akita Inu" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-sl-bqH" userLabel="Dog ImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="WBm-Sv-1Go"/>
-                                                        <constraint firstAttribute="width" secondItem="bQZ-sl-bqH" secondAttribute="height" multiplier="1:1" id="d5F-6V-MK1"/>
-                                                        <constraint firstAttribute="width" constant="180" id="zKE-H0-q7K"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="&lt;Definido pela raca do doguinho&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB3-K3-1f0" userLabel="Nome Label">
-                                                    <rect key="frame" x="0.0" y="184" width="180" height="33.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6P1-Us-6f4" userLabel="Container Stack View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="228"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Akita Inu" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-sl-bqH" userLabel="Dog ImageView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="180" id="WBm-Sv-1Go"/>
+                                                                <constraint firstAttribute="width" secondItem="bQZ-sl-bqH" secondAttribute="height" multiplier="1:1" id="d5F-6V-MK1"/>
+                                                                <constraint firstAttribute="width" constant="180" id="zKE-H0-q7K"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="&lt;Definido pela raca do doguinho&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB3-K3-1f0" userLabel="Nome Label">
+                                                            <rect key="frame" x="0.0" y="184" width="180" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LB3-K3-1f0" firstAttribute="leading" secondItem="VEn-d7-AXZ" secondAttribute="leading" id="Zrx-Wp-mYw"/>
-                                                <constraint firstItem="bQZ-sl-bqH" firstAttribute="top" secondItem="VEn-d7-AXZ" secondAttribute="top" id="hZg-9e-tGF"/>
-                                                <constraint firstItem="LB3-K3-1f0" firstAttribute="top" secondItem="bQZ-sl-bqH" secondAttribute="bottom" constant="4" id="i1u-ZO-RkU"/>
-                                                <constraint firstAttribute="trailing" secondItem="bQZ-sl-bqH" secondAttribute="trailing" id="iYM-NG-byK"/>
-                                                <constraint firstItem="bQZ-sl-bqH" firstAttribute="leading" secondItem="VEn-d7-AXZ" secondAttribute="leading" id="u6x-YR-hTr"/>
-                                                <constraint firstAttribute="trailing" secondItem="LB3-K3-1f0" secondAttribute="trailing" id="y5h-YJ-wyx"/>
+                                                <constraint firstItem="6P1-Us-6f4" firstAttribute="top" secondItem="VEn-d7-AXZ" secondAttribute="top" id="ATl-6q-4hc"/>
+                                                <constraint firstAttribute="bottom" secondItem="6P1-Us-6f4" secondAttribute="bottom" id="ZGY-gX-xHc"/>
+                                                <constraint firstItem="6P1-Us-6f4" firstAttribute="leading" secondItem="VEn-d7-AXZ" secondAttribute="leading" id="oc9-3e-OdB"/>
+                                                <constraint firstAttribute="trailing" secondItem="6P1-Us-6f4" secondAttribute="trailing" id="zd2-dX-1XH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="228"/>

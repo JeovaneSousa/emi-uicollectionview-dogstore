@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Avc-dq-wk0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Avc-dq-wk0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,36 +15,133 @@
             <objects>
                 <navigationController id="Avc-dq-wk0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kln-Ni-AsW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZJV-dz-TeW" kind="relationship" relationship="rootViewController" id="miy-0P-bNg"/>
+                        <segue destination="ZJV-dz-TeW" kind="relationship" relationship="rootViewController" id="afK-n2-TmI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F07-dw-dpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-341" y="189"/>
         </scene>
-        <!--View Controller-->
+        <!--Lista De Racas View Controller-->
         <scene sceneID="PLq-Z9-oOQ">
             <objects>
-                <viewController id="ZJV-dz-TeW" customClass="ViewController" customModule="LearningTask_7_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZJV-dz-TeW" customClass="ListaDeRacasViewController" customModule="LearningTask_7_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4UV-eh-pJc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-4X-lfj" userLabel="Dogepedia Collection View">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="24" id="tOi-gZ-pBH">
+                                    <size key="itemSize" width="180" height="228"/>
+                                    <size key="headerReferenceSize" width="0.0" height="54"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="24" minY="12" maxX="24" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RacaViewCell" id="NI5-bP-xAA" userLabel="Raca View Cell" customClass="RacaViewCell" customModule="LearningTask_7_2" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="66" width="180" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VEn-d7-AXZ" customClass="RacaViewCell" customModule="LearningTask_7_2" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Akita Inu" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-sl-bqH" userLabel="Dog ImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="WBm-Sv-1Go"/>
+                                                        <constraint firstAttribute="width" secondItem="bQZ-sl-bqH" secondAttribute="height" multiplier="1:1" id="d5F-6V-MK1"/>
+                                                        <constraint firstAttribute="width" constant="180" id="zKE-H0-q7K"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="&lt;Definido pela raca do doguinho&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB3-K3-1f0" userLabel="Nome Label">
+                                                    <rect key="frame" x="0.0" y="184" width="180" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LB3-K3-1f0" firstAttribute="leading" secondItem="VEn-d7-AXZ" secondAttribute="leading" id="Zrx-Wp-mYw"/>
+                                                <constraint firstItem="bQZ-sl-bqH" firstAttribute="top" secondItem="VEn-d7-AXZ" secondAttribute="top" id="hZg-9e-tGF"/>
+                                                <constraint firstItem="LB3-K3-1f0" firstAttribute="top" secondItem="bQZ-sl-bqH" secondAttribute="bottom" constant="4" id="i1u-ZO-RkU"/>
+                                                <constraint firstAttribute="trailing" secondItem="bQZ-sl-bqH" secondAttribute="trailing" id="iYM-NG-byK"/>
+                                                <constraint firstItem="bQZ-sl-bqH" firstAttribute="leading" secondItem="VEn-d7-AXZ" secondAttribute="leading" id="u6x-YR-hTr"/>
+                                                <constraint firstAttribute="trailing" secondItem="LB3-K3-1f0" secondAttribute="trailing" id="y5h-YJ-wyx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="228"/>
+                                        <connections>
+                                            <outlet property="dogImageView" destination="bQZ-sl-bqH" id="Q0b-1C-PMJ"/>
+                                            <outlet property="nomeLabel" destination="LB3-K3-1f0" id="Htw-tv-5B7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="RacaSectionHeader" id="zly-ZQ-qlD" userLabel="Section Heaader Reusable View" customClass="RacaSectionHeader" customModule="LearningTask_7_2" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raças" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-qS-vv1" userLabel="Title Label">
+                                            <rect key="frame" x="8" y="19.5" width="398" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-8X-nJZ" userLabel="Borda View">
+                                            <rect key="frame" x="8" y="45" width="398" height="1"/>
+                                            <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="uI5-Du-w0u"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tMs-qS-vv1" firstAttribute="leading" secondItem="hyF-8X-nJZ" secondAttribute="leading" id="4BU-b1-LWz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tMs-qS-vv1" secondAttribute="trailing" id="FtK-lP-2PQ"/>
+                                        <constraint firstItem="hyF-8X-nJZ" firstAttribute="top" secondItem="tMs-qS-vv1" secondAttribute="bottom" constant="4" id="Jda-o3-NRF"/>
+                                        <constraint firstAttribute="bottom" secondItem="hyF-8X-nJZ" secondAttribute="bottom" constant="8" id="OmZ-vG-API"/>
+                                        <constraint firstItem="tMs-qS-vv1" firstAttribute="trailing" secondItem="hyF-8X-nJZ" secondAttribute="trailing" id="WwQ-lp-tmf"/>
+                                        <constraint firstItem="tMs-qS-vv1" firstAttribute="leading" secondItem="zly-ZQ-qlD" secondAttribute="leadingMargin" id="hpn-4T-kUd"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="tMs-qS-vv1" id="oRz-r5-XZY"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Qif-cU-0CX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t8N-4X-lfj" firstAttribute="top" secondItem="Qif-cU-0CX" secondAttribute="top" id="9LF-2J-NKS"/>
+                            <constraint firstItem="Qif-cU-0CX" firstAttribute="trailing" secondItem="t8N-4X-lfj" secondAttribute="trailing" id="dhY-Tw-4AD"/>
+                            <constraint firstItem="Qif-cU-0CX" firstAttribute="bottom" secondItem="t8N-4X-lfj" secondAttribute="bottom" id="fXB-jB-jgS"/>
+                            <constraint firstItem="t8N-4X-lfj" firstAttribute="leading" secondItem="Qif-cU-0CX" secondAttribute="leading" id="mm1-5M-RpP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Qf-ir-yKJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t8N-4X-lfj" id="qlJ-2V-WZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7Y-J1-YCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="383"/>
+            <point key="canvasLocation" x="511.59420289855075" y="382.36607142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Akita Inu" width="500" height="500"/>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

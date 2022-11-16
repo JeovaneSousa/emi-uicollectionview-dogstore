@@ -9,25 +9,31 @@
 /* Begin PBXBuildFile section */
 		58137953282EC2A20079F650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137952282EC2A20079F650 /* AppDelegate.swift */; };
 		58137955282EC2A20079F650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137954282EC2A20079F650 /* SceneDelegate.swift */; };
-		58137957282EC2A20079F650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137956282EC2A20079F650 /* ViewController.swift */; };
+		58137957282EC2A20079F650 /* ListaDeRacasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */; };
 		5813795A282EC2A20079F650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58137958282EC2A20079F650 /* Main.storyboard */; };
 		5813795C282EC2A40079F650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5813795B282EC2A40079F650 /* Assets.xcassets */; };
 		5813795F282EC2A40079F650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5813795D282EC2A40079F650 /* LaunchScreen.storyboard */; };
 		5813796A282EDBE00079F650 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137969282EDBE00079F650 /* Theme.swift */; };
 		58137976282EF1620079F650 /* DogsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137975282EF1620079F650 /* DogsAPI.swift */; };
+		D920A44C29240AAF00ED8827 /* Raca.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920A44B29240AAF00ED8827 /* Raca.swift */; };
+		D920A44F29240DCC00ED8827 /* RacaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920A44E29240DCC00ED8827 /* RacaViewCell.swift */; };
+		D920A4512924114100ED8827 /* RacaSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920A4502924114100ED8827 /* RacaSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5813794F282EC2A20079F650 /* LearningTask-7.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-7.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58137952282EC2A20079F650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58137954282EC2A20079F650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58137956282EC2A20079F650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeRacasViewController.swift; sourceTree = "<group>"; };
 		58137959282EC2A20079F650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5813795B282EC2A40079F650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5813795E282EC2A40079F650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58137960282EC2A40079F650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58137969282EDBE00079F650 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		58137975282EF1620079F650 /* DogsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsAPI.swift; sourceTree = "<group>"; };
+		D920A44B29240AAF00ED8827 /* Raca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
+		D920A44E29240DCC00ED8827 /* RacaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacaViewCell.swift; sourceTree = "<group>"; };
+		D920A4502924114100ED8827 /* RacaSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacaSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 				58137967282ED91A0079F650 /* Supportive Files */,
 				5813795B282EC2A40079F650 /* Assets.xcassets */,
 				58137974282EF14F0079F650 /* API */,
+				D920A44A29240A9100ED8827 /* Model */,
 				58137966282ED9150079F650 /* View */,
 				58137968282ED9320079F650 /* Scenes */,
 			);
@@ -92,6 +99,7 @@
 		58137968282ED9320079F650 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D920A44D29240DB500ED8827 /* Views */,
 				5813796B282EEE1A0079F650 /* Raças */,
 			);
 			path = Scenes;
@@ -100,7 +108,7 @@
 		5813796B282EEE1A0079F650 /* Raças */ = {
 			isa = PBXGroup;
 			children = (
-				58137956282EC2A20079F650 /* ViewController.swift */,
+				58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */,
 			);
 			name = "Raças";
 			path = "Raças";
@@ -112,6 +120,23 @@
 				58137975282EF1620079F650 /* DogsAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		D920A44A29240A9100ED8827 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D920A44B29240AAF00ED8827 /* Raca.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D920A44D29240DB500ED8827 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D920A44E29240DCC00ED8827 /* RacaViewCell.swift */,
+				D920A4502924114100ED8827 /* RacaSectionHeader.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58137957282EC2A20079F650 /* ViewController.swift in Sources */,
+				58137957282EC2A20079F650 /* ListaDeRacasViewController.swift in Sources */,
 				58137976282EF1620079F650 /* DogsAPI.swift in Sources */,
 				5813796A282EDBE00079F650 /* Theme.swift in Sources */,
 				58137953282EC2A20079F650 /* AppDelegate.swift in Sources */,
+				D920A4512924114100ED8827 /* RacaSectionHeader.swift in Sources */,
+				D920A44C29240AAF00ED8827 /* Raca.swift in Sources */,
+				D920A44F29240DCC00ED8827 /* RacaViewCell.swift in Sources */,
 				58137955282EC2A20079F650 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
